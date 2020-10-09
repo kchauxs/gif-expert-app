@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from "enzyme"
 import { GifGridItem } from "../../components/GifGridItem"
 
-describe('Pruebas en <GifGridItem/>', () => {
+describe('<GifGridItem/>', () => {
 
 
     const title = "El test"
@@ -34,7 +34,7 @@ describe('Pruebas en <GifGridItem/>', () => {
     test('should: tener la clase animate__bounce', () => {
         const div = wrapper.find('div')
         const className = div.prop('className')
-        
+
         expect(className.includes("animate__bounce")).toBe(true)
     })
 
