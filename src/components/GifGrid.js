@@ -2,10 +2,11 @@ import React, { Fragment } from 'react'
 import { useFetchGif } from '../hooks/useFetchGifs'
 import { GifGridItem } from './GifGridItem'
 import logo from '../logo.svg';
+import PropTypes from 'prop-types'
 // import { getGifs } from '../helpers/getGisf'
 
 export const GifGrid = ({ category }) => {
-    
+
     // const [images, setImages] = useState([])
 
     // useEffect(() => {
@@ -14,7 +15,7 @@ export const GifGrid = ({ category }) => {
     // }, [category])
 
 
-    const { data:images, loading } = useFetchGif(category)
+    const { data: images, loading } = useFetchGif(category)
 
 
     return (
@@ -22,14 +23,16 @@ export const GifGrid = ({ category }) => {
             <h3 className="animate__bounceIn">{category}</h3>
 
             {/* {loading && <p>Cargando...</p>} */}
-            {loading &&  <img src={logo} className="App-logo" alt="logo" />}
+            {loading && <img src={logo} className="App-logo" alt="logo" />}
 
             <div className="card-grid">
-
                 {
                     images.map(img => <GifGridItem key={img.id} {...img} />)
                 }
             </div>
         </Fragment>
     )
+}
+GifGrid.protoType = {
+    category: PropTypes.array.isRequired
 }

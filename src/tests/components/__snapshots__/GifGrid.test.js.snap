@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GifGrid/> should: mostar los items cuando se cargan las imagenes 1`] = `
+<Fragment>
+  <h3
+    className="animate__bounceIn"
+  >
+    boo
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="AA111"
+      key="AA111"
+      title="cualquier cosa"
+      url="http://localhost/test.jpg"
+    />
+    <GifGridItem
+      id="AA122"
+      key="AA122"
+      title="cualquier cosa"
+      url="http://localhost/test.jpg"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`<GifGrid/> should: mostrar correctamente el componente GifGrid 1`] = `
+<Fragment>
+  <h3
+    className="animate__bounceIn"
+  >
+    boo
+  </h3>
+  <img
+    alt="logo"
+    className="App-logo"
+    src="logo.svg"
+  />
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
