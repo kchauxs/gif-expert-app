@@ -3,12 +3,9 @@ import { AddCategory } from './components/AddCategory'
 import { GifGrid } from './components/GifGrid'
 import { CleanButton } from './components/CleanButton'
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({defaultCategories = []}) => {
 
-    const [categories, setCategoties] = useState([])
-
-    // const addCategory = () => setCategoties([...categories, "Gohan"])
-    // const addCategory = () => setCategoties(categories => [...categories, "Gohan"])
+    const [categories, setCategoties] = useState(defaultCategories)
 
     return (
         <Fragment>
